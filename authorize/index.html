@@ -7,13 +7,14 @@
 </head>
 <body>
     <script>
+	const urlParams = new URLSearchParams(window.location.search);
         var code = urlParams.get("code");
-       alert("code: " + code);
+        alert("code: " + code);
         if (code != null) {
             window.location="lumenote://authorize?code="+code;
         }
 	else {
-	alert("no code");
+	    alert("no code");
 	}
     </script>
 </body>
